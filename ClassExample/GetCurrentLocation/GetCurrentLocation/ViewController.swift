@@ -24,9 +24,25 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         // Do any additional setup after loading the view.
         locationManger.delegate = self
         locationManger.requestWhenInUseAuthorization()
-        locationManger.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManger.desiredAccuracy = kCLLocationAccuracyHundredMeters
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else {return}
+        
+        let lat = location.coordinate.latitude
+        let lng = location.coordinate.longitude
+        
+        print(lat)
+        print(lng)
     }
 
+    @IBAction func getLocation(_ sender: Any){
+        locationManger.requestLocation()
+    }
 
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
 }
 

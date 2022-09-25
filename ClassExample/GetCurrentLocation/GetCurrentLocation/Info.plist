@@ -6,6 +6,8 @@
 	<string>Please allow app to get location</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Allow app to collect location information always or in use</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Please allow app to get location when in use</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
