@@ -6,7 +6,7 @@
 //
 
 /**
- 1. add the Privacy strings to Info.plist
+ 1. add the Privacy strings to I0nfo.plist
  2. Set location to whereever you want on the simulator
  3. import location (Feature -> Location -> custom location)
  4. conform to CLLocationManagerDelegate
