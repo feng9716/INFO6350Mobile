@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E177E0ED77CEF9EBBDC1007 /* Pods_StockTicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C573A7E2A4705A518F0CA8F9 /* Pods_StockTicker.framework */; };
 		F5209FB628E9020C00D60BDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5209FB528E9020C00D60BDD /* AppDelegate.swift */; };
 		F5209FB828E9020C00D60BDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5209FB728E9020C00D60BDD /* SceneDelegate.swift */; };
 		F5209FBA28E9020C00D60BDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5209FB928E9020C00D60BDD /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01D99FDDC2126D034562A87E /* Pods-StockTicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTicker.release.xcconfig"; path = "Target Support Files/Pods-StockTicker/Pods-StockTicker.release.xcconfig"; sourceTree = "<group>"; };
+		27D6BD4E32669C9D8F970056 /* Pods-StockTicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockTicker.debug.xcconfig"; path = "Target Support Files/Pods-StockTicker/Pods-StockTicker.debug.xcconfig"; sourceTree = "<group>"; };
+		C573A7E2A4705A518F0CA8F9 /* Pods_StockTicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockTicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5209FB228E9020C00D60BDD /* StockTicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockTicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5209FB528E9020C00D60BDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5209FB728E9020C00D60BDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E177E0ED77CEF9EBBDC1007 /* Pods_StockTicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C39F3F14611DDF292D68DA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C573A7E2A4705A518F0CA8F9 /* Pods_StockTicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2399F91B82D57C5C95B1811 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27D6BD4E32669C9D8F970056 /* Pods-StockTicker.debug.xcconfig */,
+				01D99FDDC2126D034562A87E /* Pods-StockTicker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F5209FA928E9020C00D60BDD = {
 			isa = PBXGroup;
 			children = (
 				F5209FB428E9020C00D60BDD /* StockTicker */,
 				F5209FB328E9020C00D60BDD /* Products */,
+				B2399F91B82D57C5C95B1811 /* Pods */,
+				7C39F3F14611DDF292D68DA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5209FC628E9021300D60BDD /* Build configuration list for PBXNativeTarget "StockTicker" */;
 			buildPhases = (
+				9D6A6EA26462FCE6A194BD15 /* [CP] Check Pods Manifest.lock */,
 				F5209FAE28E9020C00D60BDD /* Sources */,
 				F5209FAF28E9020C00D60BDD /* Frameworks */,
 				F5209FB028E9020C00D60BDD /* Resources */,
+				11BF2344D75ECC0A5B1B4BC8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11BF2344D75ECC0A5B1B4BC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTicker/Pods-StockTicker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockTicker/Pods-StockTicker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockTicker/Pods-StockTicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D6A6EA26462FCE6A194BD15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockTicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F5209FAE28E9020C00D60BDD /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F5209FC728E9021300D60BDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27D6BD4E32669C9D8F970056 /* Pods-StockTicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +379,7 @@
 		};
 		F5209FC828E9021300D60BDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01D99FDDC2126D034562A87E /* Pods-StockTicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -6,5 +6,9 @@ target 'StockTicker' do
   use_frameworks!
 
   # Pods for StockTicker
-
+  pod 'Alamofire'
+  pod 'SwiftyJSON', '~> 4.0'
+  pod "SwiftSpinner"
+  
+  
 end
