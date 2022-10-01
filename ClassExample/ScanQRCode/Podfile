@@ -1,0 +1,12 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'ScanQRCode' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ScanQRCode
+  pod 'QR-Code-Scanner-iOS', '~> 1.0'
+  
+
+end
