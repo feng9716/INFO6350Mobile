@@ -6,7 +6,7 @@
 //
 
 /**
- 1. add the Privacy strings to I0nfo.plist
+ 1. add the Privacy strings to Info.plist
  2. Set location to whereever you want on the simulator
  3. import location (Feature -> Location -> custom location)
  4. conform to CLLocationManagerDelegate
@@ -35,6 +35,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         print(lat)
         print(lng)
+        
+        getAddressFromLocation(location: location)
     }
 
     @IBAction func getLocation(_ sender: Any){
@@ -43,6 +45,40 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+    
+    func getAddressFromLocation(location: CLLocation){
+        let clGeoCoder = CLGeocoder()
+        
+        clGeoCoder.reverseGeocodeLocation(location) { placeMarks, error in
+            if(error != nil){
+                print(error?.localizedDescription)
+                return
+            }
+            
+            var address = ""
+            guard let place = placeMarks?.first else {return}
+            
+            if(place.name != nil){
+                address += (place.name! + ", ")
+            }
+            if(place.subLocality != nil){
+                address += (place.name! + ", ")
+            }
+            if(place.locality != nil){
+                address += (place.locality! + ", ")
+            }
+            if(place.postalCode != nil){
+                address += (place.postalCode! + ", ")
+            }
+            if(place.country != nil){
+                address += (place.country! + ", ")
+            }
+            print(address);
+        }
+        
+        
+        
     }
 }
 
