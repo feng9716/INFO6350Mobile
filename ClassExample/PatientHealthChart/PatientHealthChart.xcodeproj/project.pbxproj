@@ -15,6 +15,9 @@
 		F5A19F5929170AEB0003F43B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A19F5829170AEB0003F43B /* Assets.xcassets */; };
 		F5A19F5C29170AEB0003F43B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A19F5A29170AEB0003F43B /* LaunchScreen.storyboard */; };
 		F5A19F6429170D4B0003F43B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F5A19F6329170D4B0003F43B /* GoogleService-Info.plist */; };
+		F5A19F6A29171C740003F43B /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A19F6929171C740003F43B /* KeyChainService.swift */; };
+		F5A19F6C29171CD60003F43B /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A19F6B29171CD60003F43B /* StringExtension.swift */; };
+		F5A19F6E291720BF0003F43B /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A19F6D291720BF0003F43B /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,9 @@
 		F5A19F5B29170AEB0003F43B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5A19F5D29170AEB0003F43B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5A19F6329170D4B0003F43B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F5A19F6929171C740003F43B /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
+		F5A19F6B29171CD60003F43B /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		F5A19F6D291720BF0003F43B /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F77A9C9326403936EECD461D /* Pods-PatientHealthChart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PatientHealthChart.release.xcconfig"; path = "Target Support Files/Pods-PatientHealthChart/Pods-PatientHealthChart.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +56,6 @@
 				527B6962CB90B996FE429A78 /* Pods-PatientHealthChart.debug.xcconfig */,
 				F77A9C9326403936EECD461D /* Pods-PatientHealthChart.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,16 +88,51 @@
 		F5A19F4E29170AE80003F43B /* PatientHealthChart */ = {
 			isa = PBXGroup;
 			children = (
+				F5A19F6829171C580003F43B /* Utilities */,
+				F5A19F67291716A50003F43B /* Controller */,
+				F5A19F662917169D0003F43B /* View */,
+				F5A19F65291716970003F43B /* Model */,
 				F5A19F4F29170AE80003F43B /* AppDelegate.swift */,
 				F5A19F5129170AE80003F43B /* SceneDelegate.swift */,
-				F5A19F5329170AE80003F43B /* ViewController.swift */,
-				F5A19F5529170AE80003F43B /* Main.storyboard */,
 				F5A19F5829170AEB0003F43B /* Assets.xcassets */,
 				F5A19F5A29170AEB0003F43B /* LaunchScreen.storyboard */,
 				F5A19F5D29170AEB0003F43B /* Info.plist */,
 				F5A19F6329170D4B0003F43B /* GoogleService-Info.plist */,
 			);
 			path = PatientHealthChart;
+			sourceTree = "<group>";
+		};
+		F5A19F65291716970003F43B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F5A19F662917169D0003F43B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5A19F5529170AE80003F43B /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F5A19F67291716A50003F43B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F5A19F5329170AE80003F43B /* ViewController.swift */,
+				F5A19F6D291720BF0003F43B /* DashboardViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F5A19F6829171C580003F43B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F5A19F6929171C740003F43B /* KeyChainService.swift */,
+				F5A19F6B29171CD60003F43B /* StringExtension.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +252,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A19F5429170AE80003F43B /* ViewController.swift in Sources */,
+				F5A19F6E291720BF0003F43B /* DashboardViewController.swift in Sources */,
+				F5A19F6A29171C740003F43B /* KeyChainService.swift in Sources */,
+				F5A19F6C29171CD60003F43B /* StringExtension.swift in Sources */,
 				F5A19F5029170AE80003F43B /* AppDelegate.swift in Sources */,
 				F5A19F5229170AE80003F43B /* SceneDelegate.swift in Sources */,
 			);

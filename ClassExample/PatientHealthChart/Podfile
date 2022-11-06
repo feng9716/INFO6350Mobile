@@ -11,4 +11,5 @@ target 'PatientHealthChart' do
   pod 'FirebaseFirestore'
   pod 'FirebaseDatabase'
   pod 'FirebaseStorage'
+  pod 'KeychainSwift', '~> 20.0'
 end
