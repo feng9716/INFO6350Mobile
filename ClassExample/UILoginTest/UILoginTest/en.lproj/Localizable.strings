@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  UILoginTest
+
+  Created by 冯哲宁 on 12/3/22.
+  
+*/
+
+"Email" = "Email";
+"Password" = "Password";
+"Login" = "Login";
+"Status" = "Status";
+"Invalid Email/Password" = "Invalid Email/Password";
+"Dashboard" = "Dashboard";
+

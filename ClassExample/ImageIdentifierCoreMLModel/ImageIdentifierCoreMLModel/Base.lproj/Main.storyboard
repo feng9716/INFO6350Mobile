@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageIdentifierCoreMLModel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DZZ-mP-cTI">
+                                <rect key="frame" x="30" y="73" width="368" height="577.66666666666663"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Object is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3J-B8-Dvm">
+                                <rect key="frame" x="180.33333333333334" y="771" width="67.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MO6-Vz-yHv">
+                                <rect key="frame" x="156.66666666666666" y="681" width="114.66666666666666" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RnL-jA-hLF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Take a picture"/>
+                                <connections>
+                                    <action selector="TakeAPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OEz-Uc-Bfy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DZZ-mP-cTI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="33a-gq-KLF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MO6-Vz-yHv" secondAttribute="trailing" id="9Et-38-SnT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DZZ-mP-cTI" secondAttribute="trailing" constant="30" id="DEN-jE-5yC"/>
+                            <constraint firstItem="DZZ-mP-cTI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="LcT-XB-QSa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n3J-B8-Dvm" secondAttribute="trailing" id="Mpf-JO-Yar"/>
+                            <constraint firstItem="n3J-B8-Dvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OaD-Zt-2hm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="n3J-B8-Dvm" secondAttribute="bottom" constant="100" id="XdJ-JZ-m49"/>
+                            <constraint firstItem="MO6-Vz-yHv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eya-lX-bBV"/>
+                            <constraint firstItem="n3J-B8-Dvm" firstAttribute="top" secondItem="MO6-Vz-yHv" secondAttribute="bottom" constant="50" id="lqE-gL-lfS"/>
+                            <constraint firstItem="n3J-B8-Dvm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n9Q-vm-0Y7"/>
+                            <constraint firstItem="MO6-Vz-yHv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sFa-qp-c7I"/>
+                            <constraint firstItem="MO6-Vz-yHv" firstAttribute="top" secondItem="DZZ-mP-cTI" secondAttribute="bottom" constant="30" id="szh-zD-c9c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="DZZ-mP-cTI" id="wbS-em-nqM"/>
+                        <outlet property="lableObject" destination="n3J-B8-Dvm" id="1fd-wn-ZuR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="84"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
