@@ -15,7 +15,8 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     @IBOutlet weak var imgView: UIImageView!
     
     let mlModel = MobileNetV2().model
-    
+    let resnet50 = Resnet50().model
+    // let pizzaBurgerSalad = PizzaBurgerSaladModelOutput().model
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -71,6 +72,7 @@ class ViewController: UIViewController,UIImagePickerControllerDelegate, UINaviga
     func predictObject(image : UIImage){
         guard let ciimage = CIImage(image: image) else {return}
         
+        // Change the VNCoreMLModel here for different model
         guard let model = try? VNCoreMLModel(for: self.mlModel) else {return}
         
         let request = VNCoreMLRequest(model: model) {

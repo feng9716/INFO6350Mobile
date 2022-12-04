@@ -14,6 +14,7 @@
 		F5402133293C12B70094B049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5402132293C12B70094B049 /* Assets.xcassets */; };
 		F5402136293C12B70094B049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5402134293C12B70094B049 /* LaunchScreen.storyboard */; };
 		F540213E293C12C00094B049 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F540213D293C12C00094B049 /* MobileNetV2.mlmodel */; };
+		F5402140293C19F90094B049 /* Resnet50.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F540213F293C19F80094B049 /* Resnet50.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F5402135293C12B70094B049 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F5402137293C12B70094B049 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F540213D293C12C00094B049 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = MobileNetV2.mlmodel; path = ../../../../../Downloads/MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		F540213F293C19F80094B049 /* Resnet50.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Resnet50.mlmodel; path = ../../../../../Downloads/Resnet50.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				F5402134293C12B70094B049 /* LaunchScreen.storyboard */,
 				F5402137293C12B70094B049 /* Info.plist */,
 				F540213D293C12C00094B049 /* MobileNetV2.mlmodel */,
+				F540213F293C19F80094B049 /* Resnet50.mlmodel */,
 			);
 			path = ImageIdentifierCoreMLModel;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5402140293C19F90094B049 /* Resnet50.mlmodel in Sources */,
 				F540212E293C12B10094B049 /* ViewController.swift in Sources */,
 				F540212A293C12B10094B049 /* AppDelegate.swift in Sources */,
 				F540213E293C12C00094B049 /* MobileNetV2.mlmodel in Sources */,
